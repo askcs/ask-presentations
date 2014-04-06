@@ -1,4 +1,4 @@
 ## General purpose presentations
-v0.1.0
+v1.0.0
 
 Based on reveal.js
