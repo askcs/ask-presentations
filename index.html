@@ -133,7 +133,7 @@
     ]
   });
 
-  Reveal.addEventListener('slidechanged', function (event)
+  Reveal.addEventListener( 'slidechanged', function (event)
   {
     switch (event.indexh)
     {
@@ -149,16 +149,16 @@
       case 0:
         $(".animate01-01").addClass('animated bounce');
         setTimeout(function(){$(".animate01-02").addClass('animated bounce');}, 500);
-        setTimeout(function(){$(".animate01-03").addClass('animated tada');},   1200);
+        setTimeout(function(){$(".animate01-03").addClass('animated tada');}, 1200);
         setTimeout(function(){$(".scenarioText1").addClass('animated pulse');}, 2500);
-        setTimeout(function(){$(".next").addClass('animated wobble');},         4000);
+        setTimeout(function(){$(".next").addClass('animated wobble');}, 4000);
 
         setTimeout(function(){ cleanStyles(0); }, 3500);
         break;
       case 1:
         $('.animate02-01').addClass('animated swing');
-        setTimeout(function(){$(".animate02-02").addClass('animated shake');},  250);
-        setTimeout(function(){$(".animate02-03").addClass('animated shake');},  500);
+        setTimeout(function(){$(".animate02-02").addClass('animated shake');}, 250);
+        setTimeout(function(){$(".animate02-03").addClass('animated shake');}, 500);
         setTimeout(function(){$(".scenarioText2").addClass('animated pulse');}, 1500);
 
         setTimeout(function(){ cleanStyles(1); }, 2500);
@@ -166,11 +166,11 @@
       case 2:
         $('.animate03-01').addClass('animated flip');
         setTimeout(function(){$(".scenarioText3").addClass('animated pulse');}, 1000);
-        setTimeout(function(){$(".animate03-02").addClass('animated pulse');},  2000);
-        setTimeout(function(){$(".animate03-03").addClass('animated pulse');},  2250);
-        setTimeout(function(){$(".animate03-04").addClass('animated pulse');},  2500);
-        setTimeout(function(){$(".animate03-05").addClass('animated pulse');},  2750);
-        setTimeout(function(){$(".animate03-06").addClass('animated pulse');},  3000);
+        setTimeout(function(){$(".animate03-02").addClass('animated pulse');}, 2000);
+        setTimeout(function(){$(".animate03-03").addClass('animated pulse');}, 2250);
+        setTimeout(function(){$(".animate03-04").addClass('animated pulse');}, 2500);
+        setTimeout(function(){$(".animate03-05").addClass('animated pulse');}, 2750);
+        setTimeout(function(){$(".animate03-06").addClass('animated pulse');}, 3000);
 
         setTimeout(function(){ cleanStyles(2); }, 4000);
         break;
