@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "slide-1.html",
+    "attr": {
+      "data-background": "#FACB6A"
+    }
+  },
+  {
+    "filename": "slide-2.html",
+    "attr": {
+      "data-background": "#FACB6A"
+    }
+  },
+  {
+    "filename": "slide-3.html",
+    "attr": {
+      "data-background": "#FACB6A"
+    }
+  },
+  {
+    "filename": "slide-4.html",
+    "attr": {
+      "data-background": "#FACB6A"
+    }
+  }
+]
