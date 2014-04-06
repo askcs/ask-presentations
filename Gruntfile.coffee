@@ -1,4 +1,3 @@
-# Generated on 2014-04-03 using generator-reveal 0.3.4
 module.exports = (grunt) ->
 
     grunt.initConfig
@@ -31,7 +30,7 @@ module.exports = (grunt) ->
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
-        
+
             sass:
                 files: ['css/source/theme.scss']
                 tasks: ['sass']
@@ -41,17 +40,15 @@ module.exports = (grunt) ->
             theme:
                 files:
                     'css/theme.css': 'css/source/theme.scss'
-        
+
         connect:
 
             livereload:
                 options:
                     port: 9000
-                    # Change hostname to '0.0.0.0' to access
-                    # the server from outside.
                     hostname: 'localhost'
                     base: '.'
-                    open: true
+                    open: '0.0.0.0'
                     livereload: true
 
         coffeelint:

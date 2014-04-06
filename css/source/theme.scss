@@ -1,57 +1,258 @@
-/**
- * Default theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
-
-// This file has been copied over from
-// ../../bower_components/reveal.js/css/theme/source/default.scss
-
-// Default mixins and settings -----------------
-@import "../../vendors/reveal.js/css/theme/template/mixins";
-@import "../../vendors/reveal.js/css/theme/template/settings";
-// ---------------------------------------------
-
-// Include theme-specific fonts ----------------
-//@font-face {
-//        font-family: 'League Gothic';
-//        src: url('../../lib/font/league_gothic-webfont.eot');
-//        src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
-//                 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
-//                 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
-//                 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
-//
-//        font-weight: normal;
-//        font-style: normal;
-//}
-
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-// ---------------------------------------------
 
-// Override theme settings ---------------------
-// $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
-// Other options include e.g.
-// $mainFont: 'Open Sans', sans-serif;
-// $linkColor: #ed1dff;
-// $linkColorHover: $linkColor;
-// $headingFont: 'Montserrat', Impact, sans-serif;
-// $headingTextShadow: none;
-// $headingLetterSpacing: -0.03em;
-// $headingTextTransform: none;
-// $selectionBackgroundColor: #e0ad52;
-// $mainFontSize: 30px;
-// See ../../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
-// ---------------------------------------------
+$backgroundColor: #2b2b2b;
+$mainFont: 'Lato', sans-serif;
+$mainFontSize: 18px;
+$mainColor: #000000 !default;
+$headingMargin: 0 0 80px 0;
+$headingFont: $mainFont;
+$headingColor: #000000 !default;
+$headingLineHeight: 1.2em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$heading1TextShadow: $headingTextShadow;
+$linkColor: #000000 !default;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
 
-// Background generator ------------------------
-@mixin bodyBackground() {
-        @include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
+body {
+  background-color: $backgroundColor;
 }
-// ---------------------------------------------
 
-// Theme template ------------------------------
-@import "../../vendors/reveal.js/css/theme/template/theme";
-// ---------------------------------------------
+.reveal {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: $mainColor;
+}
 
-// See ../../bower_components/reveal.js/css/theme/README.md
-// for further explanations on how reveal.js themes work.
+::selection {
+  color: $selectionColor;
+  background: $selectionBackgroundColor;
+  text-shadow: none;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: $headingMargin;
+  color: $headingColor;
+  font-family: $headingFont;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
+}
+
+.reveal a:not(.image) {
+  color: $linkColor;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition:    color .15s ease;
+  -ms-transition:     color .15s ease;
+  -o-transition:      color .15s ease;
+  transition:         color .15s ease;
+}
+
+.reveal a:not(.image):hover {
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: darken( $linkColor, 15% );
+}
+
+.reveal section img {
+  -webkit-transition: all .2s linear;
+  -moz-transition:    all .2s linear;
+  -ms-transition:     all .2s linear;
+  -o-transition:      all .2s linear;
+  transition:         all .2s linear;
+}
+
+.reveal a:hover img {
+}
+
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: $linkColor;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: $linkColor;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: $linkColor;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: $linkColor;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: $linkColorHover;
+}
+
+.reveal .progress {
+  background: rgba(0,0,0,0.2);
+}
+.reveal .progress span {
+  background: $linkColor;
+  -webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  -moz-transition:    width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  -ms-transition:     width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  -o-transition:      width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  transition:         width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+}
+
+.reveal .slide-number {
+  color: $linkColor;
+}
+
+
+#menu{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  position:fixed;
+  top:0;
+  left:0;
+  height: 60px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin:0;
+  background-color: #000;
+  border:none;
+}
+
+.mainMenu {
+  .container {
+    text-align: center;
+    position: relative;
+    div div:first-child ul {
+      text-align: right;
+    }
+  }
+  #mainLogo {
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    .logoContainer{
+      height: auto;
+      width: 100%;
+      a {
+        outline: none;
+        background: url('../img/logoHeader.png') no-repeat;
+        height: 110px;
+        width: 140px;
+        display: block;
+        margin-left: -70px;
+      }
+    }
+  }
+}
+
+
+//.scenarioImg {
+//  width: 100%;
+//  height: auto;
+//  max-width: 750px;
+//  max-height: 405px;
+//  margin: 20px auto ;
+//  position: relative;
+//}
+//
+//.slide1 .scenarioImg img,
+//.slide2 .scenarioImg img,
+//.slide4 .scenarioImg img {
+//  float: left;
+//}
+//
+//.slide3 .scenarioImg img {
+//  width: 100%;
+//}
+//
+//.scenarioImg img.animate01-01,
+//.scenarioImg img.animate01-03 {
+//  width: 34%;
+//}
+//.scenarioImg img.animate01-02 {
+//  width: 32%;
+//}
+//.scenarioImg img.animate02-01 {
+//  width: 15%;
+//}
+//.scenarioImg img.animate02-02 {
+//  width: 57%;
+//}
+//.scenarioImg img.animate02-03 {
+//  width: 28%;
+//}
+//.scenarioImg img.animate04-01,
+//.scenarioImg img.animate04-02 {
+//  width: 30%;
+//}
+//.scenarioImg img.animate04-03 {
+//  width: 40%;
+//}
+//
+//.slide3 .scenarioImg .absoluteElements span {
+//  position: absolute;
+//  width: 12%;
+//  height: 12%;
+//}
+//
+//.slide4 .scenarioImg .absoluteElements span img{
+//  position: absolute;
+//  width: 27%;
+//  height: auto;
+//  right: 0;
+//  top: 115px;
+//  background-color: #FACB6A;
+//  -webkit-border-radius: 50%;
+//  -moz-border-radius: 50%;
+//  border-radius: 50%;
+//}
+//
+//.absoluteElements span.animate03-02 {
+//  left: 14%;
+//  top: 19%;
+//}
+//.absoluteElements span.animate03-03 {
+//  left: 22%;
+//  top: 58%;
+//}
+//.absoluteElements span.animate03-04 {
+//  left: 44%;
+//  top: 74%;
+//}
+//.absoluteElements span.animate03-05 {
+//  left: 66%;
+//  top: 58%;
+//}
+//.absoluteElements span.animate03-06 {
+//  left: 74%;
+//  top: 19%;
+//}
