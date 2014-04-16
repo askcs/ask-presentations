@@ -2,25 +2,66 @@
   {
     "filename": "slide-1.html",
     "attr": {
-      "data-background": "#FACB6A"
     }
   },
   {
     "filename": "slide-2.html",
     "attr": {
-      "data-background": "#FACB6A"
     }
   },
   {
     "filename": "slide-3.html",
     "attr": {
-      "data-background": "#FACB6A"
     }
   },
   {
     "filename": "slide-4.html",
     "attr": {
-      "data-background": "#FACB6A"
+    }
+  },
+  {
+    "filename": "slide-5.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-6.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-7.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-8.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-9.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-10.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-11.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-12.html",
+    "attr": {
+    }
+  },
+  {
+    "filename": "slide-13.html",
+    "attr": {
     }
   }
 ]
